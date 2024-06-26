@@ -20,8 +20,8 @@
         const btn = document.querySelector('#btn');
         const link = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious&type=single";
 
-        let getJoke = () => {
-            fetch(link)
+        let getJoke = async() => {
+            await fetch(link)
             .then(data => data.json())
             .then(item => {
                 joke.textContent = `${item.joke}`;
@@ -29,7 +29,7 @@
         }
 
         btn.addEventListener("click",getJoke);
-        // getJoke();
+        getJoke();
 
     </script>
 </body>

@@ -4,16 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tell Me A Joke</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/output.css">
 </head>
-<body>
-    <div class="wrapper">
-        <span>&#128517;</span>
-        <p id="joke">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime itaque eius eligendi, recusandae ullam asperiores culpa assumenda eos alias saepe cupiditate, qui et. Dolore, amet cumque iure voluptas saepe ducimus.
+<body class="poppins bg-purple-400">
+
+    <div class="flex justify-center items-center flex-col p-10 ">
+        <span class="text-9xl m-4 ">&#128517;</span>
+        <p id="joke" class="text-3xl text-white m-4 text-center">
         </p>
-        <button id="joke">Make me Laugh</button>
+        <button id="btn" class="text-2xl border-y-2 border-x-2 p-3 text-white rounded-3xl border-purple-500 hover:bg-purple-500 hover:scale-125 transition ease-in-out delay-150 duration-300">Make me Laugh</button>
     </div>
     
+    <script>
+        const joke = document.querySelector('#joke');
+        const btn = document.querySelector('#btn');
+        const link = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious&type=single";
+
+        let getJoke = () => {
+            fetch(link)
+            .then(data => data.json())
+            .then(item => {
+                joke.textContent = `${item.joke}`;
+            });
+        }
+
+        btn.addEventListener("click",getJoke);
+        // getJoke();
+
+    </script>
 </body>
 </html>

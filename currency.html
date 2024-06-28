@@ -19,6 +19,7 @@
 body{
     background-color: #ffffff;
     min-height: 100vh;
+    overflow-x: hidden;
     color: #ffffff;
     font-family: "Poppins", sans-serif;
 }
@@ -28,6 +29,7 @@ nav{
     background-color: rgb(168, 85, 247);
     justify-content: center;
     align-items: center;
+    width: 100vw;
 }
 .icon{
     margin: 0 23px;
@@ -120,10 +122,12 @@ form button{
     width: 100%;
     font-weight: 700;
     cursor: pointer;
-}
-form button:hover{
     background-color: #222222;
     color: #ffffff;
+}
+form button:hover{
+    background-color: #ffffff;
+    color: #222222;
     scale: 1.1;
     transition: 3s ease-in-out;
     transition-duration: 300ms;
@@ -157,7 +161,18 @@ form button:hover{
     font-family: sans-serif;
     text-align: center;
     font-weight: 800;
-}</style>
+}
+@media (max-width: 639px){
+    body{
+       min-width: 100%;
+       min-height: 100%;
+    }
+
+}
+    
+
+
+</style>
 <body> 
     <nav>
        <div class="icon">Currency Converter 9000</div>

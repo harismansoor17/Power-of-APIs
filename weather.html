@@ -15,7 +15,7 @@
         <div class="w-full flex justify-evenly items-center">
 
             <input type="text" id="search" placeholder="Enter Location..." spellcheck="false"
-                class=" text-black bg-white text-lg w-4/5 p-2 rounded-full outline-none border-none">
+                class=" text-black bg-white text-lg w-4/5 p-2 sm:p-3 rounded-full outline-none border-none">
 
             <button class="button bg-white p-2 rounded-full object-contain w-14 h-42"><img
                     src="images/weather/search.png" class="button"></button>
@@ -24,13 +24,13 @@
             class="p-4 rounded-3xl text-center hidden text-black text-2xl font-semibold">
             Invalid City..</div>
 
-        <div class="flex justify-center items-center flex-col object-contain font-medium m-4"><img
+        <div class="flex justify-center items-center flex-col object-contain font-medium m-4 sm:m-10"><img
                 src="images/weather/clear.png" id="icon" class="h-fit" alt="">
 
-            <h1 id="temp" class="text-9xl font-bold">Temp..</h1>
-            <h2 id="city" class="text-6xl mt-5">City..</h2>
+            <h1 id="temp" class="text-9xl sm:text-7xl font-bold">Temp..</h1>
+            <h2 id="city" class="text-6xl sm:text-5xl mt-5">City..</h2>
 
-            <div class="flex justify-between md:flex-col text-center  w-full mt-9 text-3xl ">
+            <div class="flex justify-between md:flex-col text-center  w-full mt-12 text-3xl sm:text-4xl ">
                 <div class="flex items-center text-left "><img src="images/weather/humidity.png" class="w-10 m-3"
                         alt="">
                     <div class="flex flex-col">
@@ -39,7 +39,7 @@
                     </div>
                 </div>
 
-                <div class="flex items-center text-left"><img src="images/weather/wind.png" class="w-10 m-3" alt="">
+                <div class="flex items-center text-left sm:mt-4"><img src="images/weather/wind.png" class="w-10 m-3" alt="">
                     <div class="flex flex-col ">
                         <p>Wind Speed</p>
                         <p id="wind">...</p>

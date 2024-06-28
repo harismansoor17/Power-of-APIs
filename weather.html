@@ -4,41 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <title>Weather App</title>
+    <title>Weather app</title>
+    <link rel="stylesheet" href="src/output.css">
 </head>
 
-<body>
-    <div class="container">
-        <h3 class="brand">The Weather</h3>
-        <h1 class="temp">49&#176;</h1>
-        <div class="city-time">
-            <h1 class="city">Lahore</h1>
-            <small>
-                <span class="time">06:10</span>
-                -
-                <span class="date">
-                    Monday Dec 24
-                </span>
-            </small>
-            <div class="weather">
-                <i class="fa-solid fa-sun icon" width="50" height="50" style="color: #FFD43B;"></i>
-                <span class="condition">Sunny</span>
+<body class=" *:box-border bg-purple-500 w-full h-full text-white poppins">
+
+    <div class="flex justify-center items-center flex-col m-4 bg-purple-400">
+
+        <div class="w-full flex justify-evenly items-center">
+
+            <input type="text" placeholder="Enter Location..." spellcheck="false"
+                class=" text-black bg-white text-lg w-4/5 p-2 rounded-full outline-none border-none">
+
+            <button class="bg-white p-2 rounded-full object-contain w-14 h-42"><img
+                    src="images/weather/search.png"></button>
+        </div>
+        <div class="flex justify-center items-center flex-col object-contain font-medium "><img src="images/weather/rainy.png" class="h-fit"
+                alt="">
+
+            <h1 class="text-5xl">22&deg;C</h1>
+            <h2 class="text-4xl mt-3">Lahore</h2>
+
+            <div class="flex justify-between w-full ">
+                <div class="flex items-center text-left "><img src="images/weather/humidity.png" class="w-10 m-3" alt="">
+                    <p class="inline">50%</p>                   
+                    <p class="inline">Humidity</p>
+                </div>
+
+                <div class="flex items-center text-left"><img src="images/weather/wind.png" class="w-10 m-3" alt="">
+                    <p>15 km/h</p>
+                    <p>Wind Speed</p>
+                </div>
             </div>
         </div>
     </div>
-    <div class="panel">
-        <form id="locationInput">
-            <input type="typetext" class="search" placeholder="Secrch Location...">
 
-            <button class="submit" type="submit">
-                <i class="fas fa-search"></i>
-            </button>
-            <ul class="cities">
-                li
-            </ul>
-        </form>
-    </div>
+
+
 </body>
 
 </html>

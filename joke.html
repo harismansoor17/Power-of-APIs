@@ -3,38 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tell Me A Joke</title>
+    <title>Joke Please</title>
     <link rel="stylesheet" href="src/output.css">
 </head>
-<body class="poppins bg-purple-400 text-white">
+<body class="poppins bg-purple-400 text-white h-full">
 
-    <div class="flex justify-center items-center flex-col p-10 ">
-        <span class="text-9xl m-4 ">&#128517;</span>
+    <div class="flex justify-center items-center flex-col p-10">
+        <div class="flex justify-center items-center w-1/2 h-1/2 m-4 ">
+            <img id="emoji" src="images/joke/sad.png" class="h-fit object-contain" alt="">
+        </div>
         <p id="joke" class="text-3xl m-4 text-center">
         </p>
         <button id="btn" class="text-2xl border-y-2 border-x-2 p-3 text-white rounded-3xl border-purple-500 hover:bg-purple-500 hover:scale-125 transition ease-in-out delay-150 duration-300">Make me Laugh</button>
     </div>
 
-    <div class="text-center m-4 border-t-2 border-t-purple-500 text-2xl font-bold"><span>
+    <div class="text-center po border-t-2 border-t-purple-500 text-2xl font-semibold"><span>
         Jokes Generated are Random and are not writen by the app developer so take no offence,
         The developer Can't be held Accountable.
-    </span></div>
-    
+    </span></div>    
     <script>
-        const joke = document.querySelector('#joke');
-        const btn = document.querySelector('#btn');
-        const link = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious&type=single";
+        let joke = document.querySelector('#joke');
+        let btn = document.querySelector('#btn');
+        let emoji = document.querySelector('#emoji');
+
+        const link = "https://v2.jokeapi.dev/joke/Programming,Miscellaneous,Dark,Pun,Spooky?type=single";
+;
 
         let getJoke = async() => {
             await fetch(link)
             .then(data => data.json())
             .then(item => {
+
+                console.log(item);
+
+                if(item.category == "Dark"){
+                    emoji.src = 'images/joke/devil.png';
+                }
+                else if(item.category == "Programming"){
+                    emoji.src = 'images/joke/nerd.png';
+                }
+                else if(item.category == "Pun"){
+                    emoji.src = 'images/joke/smirking.png';
+                }
+                else if(item.category == "Misc"){
+                    emoji.src = 'images/joke/happy-face.png';
+                }
+                else if(item.category == "Spooky"){
+                    emoji.src = 'images/joke/shocked.png';
+                }
+
                 joke.textContent = `${item.joke}`;
             });
         }
 
         btn.addEventListener("click",getJoke);
-        getJoke();
+
 
     </script>
 </body>

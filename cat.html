@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat Gallery</title>
     <link rel="stylesheet" href="src/output.css">
 </head>
-<body class="poppins text-white bg-purple-400">
 
-    <div class="flex items-center justify-center m-4 bg-purple-500 p-4 text-2xl font-bold">
-        <button id="btn">Generate New Images</button>
+<body class="poppins h-full  text-white bg-purple-400">
+
+    <div class="flex items-center justify-center md:flex-col">
+        <div class=" m-4 bg-purple-500 p-4 text-2xl rounded-2xl hover:bg-white hover:scale-110 font-bold hover:text-purple-500 transition ease-in-out delay-150 duration-300">
+            <button class="w-full" id="btn">Generate New Images</button>
+        </div>
+
+        <div id="error " class="text-3xl text-red-600 font-bold m-4 hidden">404 Status</div>
+        
+        <div style="width:700px; height:700px;" class=" flex justify-center items-center m-6 p-6 border-l-4"><img class="h-fit object-contain" id="img" src="" alt=""></div>
     </div>
-    <div class="border border-white w-full h-full rounded-2xl"><img id="img" src="" alt=""></div>
-    
     <script>
         let img = document.querySelector('#img');
         let btn = document.querySelector('#btn');
-        const url = 'https://api.thecatapi.com/v1/images/search';
+        let error = document.querySelector('#error');
+        const url = 'https://api.thecatapi.com/v1/images/search?';
 
         generate = async () => {
-            const response = await fetch ('https://api.thecatapi.com/v1/images/search');
+            const response = await fetch('https://api.thecatapi.com/v1/images/search');
             var data = await response.json();
-            console.log(data);
+            // console.log(data);
 
-            img.src = url 
-            console.log('runed')
+            img.src = data[0].url;
+            // console.log('runed')
 
         }
 
-        btn.addEventListener('click', () =>{
-            console.log('click')
+        btn.addEventListener('click', () => {
+            // console.log('click')
             generate();
 
         })
@@ -38,4 +45,5 @@
 
     </script>
 </body>
+
 </html>

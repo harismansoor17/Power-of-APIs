@@ -5,6 +5,9 @@
 <p>This Project has also help me in iproving my understanding about APIs and how to use them efficiently</p>
 <br>
 <br>
+<h2>How to View and Use</h2>
+<p>Firstly open index.html file afther which You can select any one of the 4 APIs</p>
+
 <h2>How it works</h2>
 <p>Power of APIs is a collection of App which fetch data from Publically available APIs,</p>
 <ol>It includes:</ol>
@@ -20,7 +23,7 @@
 
 <h4>Currency Converter</h4>
 <p>Only app which uses vanilla Css,</p>
-<span>Because I learned the value of Tailwind Css The Hard Way</span>
+<p>Because I learned the value of Tailwind Css The Hard Way</p>
 
 
 

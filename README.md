@@ -1,6 +1,6 @@
 ## Power Of APIs
 
-<h2>Purpose:</h2>
+<h2>Introduction</h2>
 <p>Power of APIs is a personal project made to show the capability of APIs,</p>
 <p>This Project has also help me in improving my understanding about APIs and how to use them efficiently.</p>
 <br>
@@ -11,7 +11,8 @@
 
 <h2>How it works</h2>
 <p>Power of APIs is a collection of App which fetch data from Publically available APIs,</p>
-<ol>It includes:
+<span>It includes: </span>
+<ol>
 <li>Weather API (Open Weather Map API)</li>
 <li>Currency Converter (Exchange Rate-Api)</li>
 <li>Joke Generator (Joke APi)</li>
@@ -26,9 +27,8 @@
 <h2>Internal JavacScript</h2>
 <p>Power of APIs uses Internal JS inside of every indidvidual HTML file for simplicity and to make debuging Easier </p>
 <br>
-<h4>Currency Converter</h4>
-<p>Only app which uses vanilla Css,</p>
-<p>Because I learned the value of Tailwind Css The Hard Way.</p>
+<h3>Currency Converter</h3>
+<p>Only app which uses vanilla Css,Because I learned the value of Tailwind Css The Hard Way.</p>
 
 
 

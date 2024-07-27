@@ -6,19 +6,17 @@
 <br>
 <br>
 <h2>How to View and Use</h2>
-<p>This Power of APIs is designed to be viewed as a static website. Simply open the index.html file in your browser to explore the content.
-    or Go to Live Demo: https://harismansoor17.github.io/Portfolio/
-</p>
+<p>This Power of APIs is designed to be viewed as a static website. Simply open the index.html file in your browser to explore the content or Go to Live Demo: https://harismansoor17.github.io/Portfolio/</p>
 
 
 <h2>How it works</h2>
 <p>Power of APIs is a collection of App which fetch data from Publically available APIs,</p>
-<ol>It includes:</ol>
-<br>
+<ol>It includes:
 <li>Weather API (Open Weather Map API)</li>
 <li>Currency Converter (Exchange Rate-Api)</li>
 <li>Joke Generator (Joke APi)</li>
 <li>Cat Image Generator (The Cat APi)</li>
+</ol>
 <br>
 <br>
 <h2>TailWind CSS</h2>

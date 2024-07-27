@@ -1,47 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cat Gallery</title>
-    <link rel="stylesheet" href="src/output.css">
-</head>
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
 
-<body class="poppins h-full  text-white bg-purple-400">
-
+  <body class="poppins h-full text-white bg-purple-400">
     <div class="flex items-center justify-center md:flex-col">
-        <div class=" m-4 bg-purple-500 p-4 text-2xl rounded-2xl hover:bg-white hover:scale-110 font-bold hover:text-purple-500 transition ease-in-out delay-150 duration-300">
-            <button class="w-full" id="btn">Generate New Images</button>
-        </div>
-                
-        <div style="width:700px; height:700px;" class=" flex justify-center items-center m-6 p-6 border-l-4"><img class="h-fit object-contain" id="img" src="images/placeholder.jpg" alt=""></div>
+      <div
+        class="m-4 bg-purple-500 p-4 text-2xl rounded-2xl hover:bg-white hover:scale-110 font-bold hover:text-purple-500 transition ease-in-out delay-150 duration-300"
+      >
+        <button class="w-full" id="btn">Cat Me!</button>
+      </div>
+
+      <div
+        style="width: 700px; height: 700px"
+        class="flex justify-center items-center m-6 p-6 border-l-4"
+      >
+        <img
+          class="h-fit object-contain"
+          id="img"
+          src="images/placeholder.jpg"
+          alt=""
+        />
+      </div>
     </div>
+    <div id="wait" class="m-8 hidden ">PLS WAIT</div>
     <script>
-        let img = document.querySelector('#img');
-        let btn = document.querySelector('#btn');
-        let error = document.querySelector('#error');
-        const url = 'https://api.thecatapi.com/v1/images/search?';
+      let img = document.querySelector("#img");
+      let btn = document.querySelector("#btn");
+      let error = document.querySelector("#error");
+      let wait = document.querySelector("#wait");
+      const url = "https://api.thecatapi.com/v1/images/search?";
 
-        generate = async () => {
-            const response = await fetch('https://api.thecatapi.com/v1/images/search');
-            var data = await response.json();
-            // console.log(data);
+      generate = async () => {
+        const response = await fetch(
+          "https://api.thecatapi.com/v1/images/search"
+        );
+        var data = await response.json();
 
-            img.src = data[0].url;
-            // console.log('runed')
+        wait.style.display = 'block';
+        img.src = data[0].url;
 
-        }
+         setTimeout( function() {  
+                wait.style.display = 'none'        
+        }, 3000)
+      };
 
-        btn.addEventListener('click', () => {
-            // console.log('click')
-            generate();
-
-        })
-
-
-
+      btn.addEventListener("click", () => {
+        // console.log('click')
+        generate();
+      });
     </script>
-</body>
-
+  </body>
 </html>

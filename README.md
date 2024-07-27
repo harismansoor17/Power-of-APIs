@@ -6,7 +6,10 @@
 <br>
 <br>
 <h2>How to View and Use</h2>
-<p>Firstly open index.html file after which You can select any one of the 4 APIs.</p>
+<p>This Power of APIs is designed to be viewed as a static website. Simply open the index.html file in your browser to explore the content.
+    or Go to Live Demo: https://harismansoor17.github.io/Portfolio/
+</p>
+
 
 <h2>How it works</h2>
 <p>Power of APIs is a collection of App which fetch data from Publically available APIs,</p>
@@ -20,7 +23,11 @@
 <br>
 <h2>TailWind CSS</h2>
 <p>Power of APIs uses TailWind CSS instead of vanilla CSS because TailWind saves alot of development time as otherwise Vanilla Css would have been 1000+ lines of code.</p>
-
+<br>
+<br>
+<h2>Internal JavacScript</h2>
+<p>Power of APIs uses Internal JS inside of every indidvidual HTML file for simplicity and to make debuging Easier </p>
+<br>
 <h4>Currency Converter</h4>
 <p>Only app which uses vanilla Css,</p>
 <p>Because I learned the value of Tailwind Css The Hard Way.</p>

@@ -6,7 +6,7 @@
 <br>
 <br>
 <h2>How to View and Use</h2>
-<p>This Power of APIs is designed to be viewed as a static website. Simply open the index.html file in your browser to explore the content or Go to Live Demo: https://harismansoor17.github.io/Portfolio/</p>
+<p>This Power of APIs is designed to be viewed as a static website. Simply open the index.html file in your browser to explore the content or Go to Live Demo: [https://harismansoor17.github.io/Portfolio/](https://harismansoor17.github.io/Power-of-APIs/)</p>
 
 
 <h2>How it works</h2>

@@ -15,8 +15,8 @@
 <ol>
 <li>Weather API (Open Weather Map API)</li>
 <li>Currency Converter (Exchange Rate-Api)</li>
-<li>Joke Generator (Joke APi)</li>
-<li>Cat Image Generator (The Cat APi)</li>
+<li>Joke Generator (Joke API)</li>
+<li>Cat Image Generator (The Cat API)</li>
 </ol>
 <br>
 <br>

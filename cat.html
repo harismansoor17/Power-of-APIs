@@ -7,27 +7,39 @@
     <link rel="stylesheet" href="src/output.css" />
   </head>
 
-  <body class="poppins h-full text-white bg-purple-400">
-    <div class="flex items-center justify-center md:flex-col">
+  <body class="font-poppins h-full text-white bg-purple-400">
+    <header>
+      <nav
+        class="text-5xl font-extrabold font bg-purple-500 flex justify-center items-center h-20 sm:text-3xl"
+      >
+        <h2 class="px-4 border-white border-x-8">Random Cat Generator</h2>
+      </nav>
+    </header>
+    <div class="flex items-center justify-center flex-col-reverse">
       <div
-        class="m-4 bg-purple-500 p-4 text-2xl rounded-2xl hover:bg-white hover:scale-110 font-bold hover:text-purple-500 transition ease-in-out delay-150 duration-300"
+        class="m-4 bg-purple-500 p-4 text-2xl rounded-2xl hover:bg-white hover:scale-110 font-bold shadow-lg hover:text-purple-500 transition duration-500 ease-[cubic-bezier(.21,.76,.76,.28)]"
       >
         <button class="w-full" id="btn">Cat Me!</button>
       </div>
 
       <div
         style="width: 700px; height: 700px"
-        class="flex justify-center items-center m-6 p-6 border-l-4"
+        class="flex justify-center items-center h-screen m-6 p-6 border-b-4"
       >
         <img
-          class="h-fit object-contain"
+          class="h-full object-contain"
           id="img"
           src="images/placeholder.jpg"
           alt=""
         />
       </div>
     </div>
-    <div id="wait" class="m-8 hidden ">PLS WAIT</div>
+    <div id="wait" class="m-8 opacity-0 ">PLS WAIT</div>
+    <footer
+    class="text-center text-2xl  font-bold lg:text-2xl md:text-xl sm:text-base sm:px-3 bg-purple-500 h-ful flex justify-center items-center"
+  >
+    <div>Copy Right&copy All Rights Reserved By ME @ 2024 </div>
+  </footer>
     <script>
       let img = document.querySelector("#img");
       let btn = document.querySelector("#btn");
@@ -41,12 +53,13 @@
         );
         var data = await response.json();
 
-        wait.style.display = 'block';
         img.src = data[0].url;
+        wait.style.opacity = '1';
+        
+        setTimeout( () => {  
+           wait.style.opacity = '0';
 
-         setTimeout( function() {  
-                wait.style.display = 'none'        
-        }, 3000)
+              }, 3000)
       };
 
       btn.addEventListener("click", () => {

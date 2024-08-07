@@ -3,6 +3,8 @@ module.exports = {
   content: ["./*.{html,js}"],
   theme: {
     extend: {
+      fontFamily:{
+        poppins:["Poppins" , "sans sarif"]
     },
     screens: {
       '2xl': {'max': '1535px'},
@@ -22,5 +24,6 @@ module.exports = {
     }   
   },
   plugins: [],
+}
 }
 

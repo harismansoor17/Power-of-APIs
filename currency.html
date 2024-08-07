@@ -12,16 +12,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
      
 </head>
-<style>*{
+<style>
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
 }
 body{
     background-color: #ffffff;
     min-height: 100vh;
-    overflow-x: hidden;
     color: #ffffff;
-    font-family: "Poppins", sans-serif;
 }
 nav{
     font-weight: 600;
@@ -29,6 +31,7 @@ nav{
     background-color: rgb(168, 85, 247);
     justify-content: center;
     align-items: center;
+    text-align: center;
     width: 100vw;
 }
 .icon{
@@ -58,13 +61,12 @@ nav{
     font-weight: 800;
     margin: 50px; 
     width: 80vw;
+    transition: all  1s cubic-bezier(.17,1.59,.77,-0.33);
+    
 }
 .info_cnvrt:hover{
     color: #222222;
     background-color: rgb(168, 85, 247);
-    transition: 3s ease-in-out;
-    transition-delay: 150ms;
-    transition-duration: 300ms;
     scale: 1.1;
 }
 form{
@@ -99,6 +101,7 @@ form input{
     justify-content: center;   
 }
 .dropdown i{
+    overflow-y: hidden;
     margin: 2rem;
     margin-top:3.5rem ;
     font-size: 1.5rem;
@@ -156,16 +159,20 @@ form button:hover{
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
-    height: 3rem;
+    height: 100%;
     background-color:rgb(168, 85, 247);
     font-family: sans-serif;
     text-align: center;
     font-weight: 800;
 }
 @media (max-width: 639px){
-    body{
-       min-width: 100%;
-       min-height: 100%;
+    form{
+        flex-wrap: wrap;
+        margin: 15px 10px;
+    }
+    .dropdown{
+        flex-direction: column;
+
     }
 
 }

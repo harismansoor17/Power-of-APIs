@@ -10,7 +10,7 @@
 
 
 <h2>How it works</h2>
-<p>Power of APIs is a collection of App which fetch data from Publically available APIs,</p>
+<p>Power of APIs is a collection of App which fetch data from Publicaly available APIs,</p>
 <span>It includes: </span>
 <ol>
 <li>Weather API (Open Weather Map API)</li>

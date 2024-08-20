@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather app</title>
     <link rel="stylesheet" href="src/output.css">
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
 </head>
 
 <body class=" bg-purple-400 w-full h-full text-white font-poppins">
@@ -18,9 +19,9 @@
           </nav>
         </header>
 
-    <div class="flex justify-center items-center flex-col m-4">
+    <div class="flex justify-center items-center flex-col m-4 h-fit sm:h-screen">
 
-        <div class="w-full flex justify-evenly items-center">
+        <div class="w-full flex justify-evenly items-center ">
 
             <input type="text" id="search" placeholder="Enter Location..." spellcheck="false"
                 class=" text-black bg-white text-lg w-4/5 p-2 sm:p-3 rounded-full outline-none border-none">
@@ -42,14 +43,14 @@
                 <div class="flex items-center text-left "><img src="images/weather/humidity.png" class="w-10 m-3"
                         alt="">
                     <div class="flex flex-col">
-                        <p>Humidity</p>
+                        <p class="md:text-sm">Humidity</p>
                         <p id="humidity">...</p>
                     </div>
                 </div>
 
                 <div class="flex items-center text-left sm:mt-4"><img src="images/weather/wind.png" class="w-10 m-3" alt="">
                     <div class="flex flex-col ">
-                        <p>Wind Speed</p>
+                        <p class="md:text-sm">Wind Speed</p>
                         <p id="wind">...</p>
                     </div>
                 </div>
@@ -57,7 +58,7 @@
         </div>
     </div>
     <footer
-    class="text-center text-2xl  font-bold lg:text-2xl md:text-xl sm:text-base sm:px-3 bg-purple-500 h-full flex justify-center items-center"
+    class="text-center text-2xl  font-bold lg:text-2xl md:text-sm md:font-medium p-3 bg-purple-500 h-full flex justify-center items-center"
   >
     <div class="hides">Copy Right&copy All Rights Reserved By ME @ 2024 </div>
   </footer>

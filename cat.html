@@ -5,23 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cat Gallery</title>
     <link rel="stylesheet" href="src/output.css" />
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
   </head>
 
-  <body class="font-poppins h-full text-white bg-purple-400">
+  <body class="font-poppins h-fit min-w-fit text-white bg-purple-400 ">
     <header>
       <nav
-        class="text-5xl font-extrabold font bg-purple-500 flex justify-center items-center h-20 sm:text-3xl"
+        class="text-5xl font-extrabold bg-purple-500 flex justify-center items-center h-20 md:text-3xl"
       >
         <h2 class="px-4 border-white border-x-8">Random Cat Generator</h2>
       </nav>
     </header>
-    <div class="flex items-center justify-center flex-col-reverse">
-      <div
-        class="m-4 bg-purple-500 p-4 text-2xl rounded-2xl hover:bg-white hover:scale-110 font-bold shadow-lg hover:text-purple-500 transition duration-500 ease-[cubic-bezier(.21,.76,.76,.28)]"
-      >
-        <button class="w-full" id="btn">Cat Me!</button>
-      </div>
-
+    <div class="flex items-center justify-center flex-col h-full sm:h-[1500px] sm:w-[700px]">
       <div
         style="width: 700px; height: 700px"
         class="flex justify-center items-center h-screen m-6 p-6 border-b-4"
@@ -33,10 +28,16 @@
           alt=""
         />
       </div>
+      <div
+        class="m-4 bg-purple-500 p-4 text-2xl rounded-2xl hover:bg-white hover:scale-110 font-bold shadow-lg hover:text-purple-500 transition duration-500 ease-[cubic-bezier(.21,.76,.76,.28)]"
+      >
+        <button class="w-full" id="btn">Cat Me!</button>
+      </div>
+
     </div>
     <div id="wait" class="m-8 opacity-0 ">PLS WAIT</div>
     <footer
-    class="text-center text-2xl  font-bold lg:text-2xl md:text-xl sm:text-base sm:px-3 bg-purple-500 h-ful flex justify-center items-center"
+    class="text-center text-2xl  font-bold lg:text-2xl md:text-xl sm:text-base p-3 bg-purple-500  flex justify-center items-center"
   >
     <div>Copy Right&copy All Rights Reserved By ME @ 2024 </div>
   </footer>
